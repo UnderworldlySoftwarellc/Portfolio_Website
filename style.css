@@ -13,8 +13,9 @@ body {
 }
 
 .logo {
-  width: 140px;
-  margin-bottom: 20px;
+  width: 220px;
+  max-width: 90%;
+  margin-bottom: 1px;
 }
 
 .hero h1 {
@@ -24,6 +25,34 @@ body {
 
 .hero p {
   color: #c084fc;
+}
+
+.business-card-link {
+  color: #9fffe0;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.business-card-link:hover {
+  color: #ffffff;
+}
+
+.business-card {
+  padding: 50px 20px;
+  max-width: 640px;
+  margin: auto;
+}
+
+.business-card-card {
+  background: #151020;
+  border: 1px solid #2b1f40;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.business-card-card p {
+  margin: 10px 0;
 }
 
 /* SECTIONS */
@@ -46,20 +75,45 @@ h2 {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px;
   background: #151020;
   padding: 20px;
   border-radius: 12px;
   border: 1px solid #2b1f40;
   transition: transform 0.2s ease;
 }
+.card {
+  text-decoration: none;
+  color: inherit;
+}
 
 .card:hover {
   transform: translateY(-5px);
 }
 
+.project-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  display: block;
+  object-fit: cover;
+  max-height: 160px;
+}
+
 /* CONTACT */
 .contact p {
   margin: 5px 0;
+}
+
+.contact img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  display: block;
+  margin: 20px auto 0;
 }
 
 /* FOOTER */
