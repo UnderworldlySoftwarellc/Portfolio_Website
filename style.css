@@ -1,30 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #0b0b12;
   color: #e0e0ff;
+  line-height: 1.6;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
   background: linear-gradient(180deg, #0b0b12, #1a1025);
 }
 
 .logo {
-  width: 220px;
+  width: 200px;
   max-width: 90%;
   margin-bottom: 1px;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   color: #9fffe0;
+  margin: 20px 0 10px;
+  word-wrap: break-word;
 }
 
 .hero p {
   color: #c084fc;
+  font-size: 0.95rem;
+  margin: 0;
 }
 
 .business-card-link {
@@ -38,7 +51,7 @@ body {
 }
 
 .business-card {
-  padding: 50px 20px;
+  padding: 30px 20px;
   max-width: 640px;
   margin: auto;
 }
@@ -47,7 +60,7 @@ body {
   background: #151020;
   border: 1px solid #2b1f40;
   border-radius: 16px;
-  padding: 24px;
+  padding: 20px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
 }
 
@@ -57,7 +70,7 @@ body {
 
 /* SECTIONS */
 section {
-  padding: 50px 20px;
+  padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
 }
@@ -65,12 +78,13 @@ section {
 h2 {
   color: #9fffe0;
   margin-bottom: 20px;
+  font-size: 1.75rem;
 }
 
 /* PORTFOLIO GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
@@ -78,34 +92,64 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 260px;
+  min-height: 280px;
   background: #151020;
-  padding: 20px;
+  padding: 16px;
   border-radius: 12px;
   border: 1px solid #2b1f40;
-  transition: transform 0.2s ease;
-}
-.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(159, 255, 224, 0.1);
+}
+
+.card h3 {
+  font-size: 1.125rem;
+  margin: 12px 0 8px;
+  color: #9fffe0;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 0;
+  flex-grow: 1;
 }
 
 .project-image {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   display: block;
   object-fit: cover;
   max-height: 160px;
 }
 
 /* CONTACT */
+.contact {
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 1.75rem;
+}
+
 .contact p {
-  margin: 5px 0;
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.contact a {
+  color: #9fffe0;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
 }
 
 .contact img {
@@ -122,4 +166,176 @@ footer {
   padding: 20px;
   background: #0a0a10;
   color: #777;
+  font-size: 0.9rem;
+}
+
+/* TABLET & MEDIUM SCREENS (768px and above) */
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+
+  .hero {
+    padding: 60px 30px;
+  }
+
+  .logo {
+    width: 240px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-top: 30px;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 60px 30px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+  }
+
+  .card {
+    min-height: 300px;
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 1.25rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  .project-image {
+    max-height: 180px;
+  }
+
+  .contact p {
+    font-size: 1rem;
+  }
+
+  .business-card {
+    padding: 50px 30px;
+  }
+}
+
+/* DESKTOP & LARGE SCREENS (1024px and above) */
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+
+  .hero {
+    padding: 80px 40px;
+  }
+
+  .logo {
+    width: 280px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 80px 40px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+  }
+
+  .card {
+    min-height: 320px;
+    padding: 24px;
+  }
+
+  .card h3 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 1.05rem;
+  }
+
+  .project-image {
+    max-height: 200px;
+  }
+
+  .contact p {
+    font-size: 1.1rem;
+  }
+}
+
+/* EXTRA LARGE SCREENS (1440px and above) */
+@media (min-width: 1440px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* MOBILE OPTIMIZATIONS (max-width 767px) */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 30px 16px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    min-height: auto;
+  }
+
+  .project-image {
+    max-height: 140px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    width: 160px;
+  }
+
+  .business-card {
+    padding: 20px 16px;
+  }
 }
